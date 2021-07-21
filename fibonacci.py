@@ -18,3 +18,9 @@ output: 2
 input: 30
 output: 832040
 '''
+def fibonacci(num):
+    answer = [0, 1]
+    answer.append( (answer[]) )
+    return answer
+
+print(fibonacci(10))

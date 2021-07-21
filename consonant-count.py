@@ -13,6 +13,7 @@ Input: 'SpamAndEggs'
 Output: 8
 '''
 
+# NON-RECURSIVE SOLVE
 def consonant_count(s):
     count = 0
     vowels =  ["a","e","i","o","u"]
@@ -21,6 +22,24 @@ def consonant_count(s):
         if i.lower() not in vowels:
             count += 1
 
-    return count
+    answer = f"The word '{s}' contains {count} consonant"
+
+    if count > 1: answer += "s" 
+
+    return answer + "."
+
+# RECURSIVE SOLVE
+def consonant_count(s, count = 0):
+    vowels =  ["a","e","i","o","u"]
+
+    if len(s) == 0: 
+        return count
+
+    if s[0] not in vowels:
+        count += 1
+
+    return consonant_count(s[1:], count)
+
+
 
 print(consonant_count("snakes"))
