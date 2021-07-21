@@ -12,3 +12,15 @@ Output: 4
 Input: 'SpamAndEggs'
 Output: 8
 '''
+
+def consonant_count(s):
+    count = 0
+    vowels =  ["a","e","i","o","u"]
+
+    for i in s:
+        if i.lower() not in vowels:
+            count += 1
+
+    return count
+
+print(consonant_count("snakes"))
